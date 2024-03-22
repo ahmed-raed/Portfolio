@@ -6,6 +6,8 @@ import Image from "next/image";
 import myImage from "../public/assets/Photo.jpg";
 import blueStorm from "../public/assets/Ellipse3.png";
 import greenStorm from "../public/assets/Ellipse1.png";
+import ai from "../public/assets/ai.png";
+import coding from "../public/assets/coding.png";
 
 export default function Home() {
   const strings = ["Web Developer", "AI Enginner", "Software Developer"];
@@ -44,7 +46,17 @@ export default function Home() {
                 className={styles.img}
                 priority={true}
               />
-              <div className={styles.blur}><span className={styles.blurText}>Welcome To My Portfolio</span></div>
+              <div className={styles.blur}>
+                <span className={styles.blurText}>Welcome To My Portfolio</span>
+              </div>
+            </div>
+            <div className={styles.iconsDiv}>
+              <div className={styles.iconsCoding}>
+                <Image src={coding} alt="ai icon" className={styles.codingIcon} />
+              </div>
+              <div className={styles.iconsAi}>
+                <Image src={ai} alt="ai icon" className={styles.aiIcon} />
+              </div>
             </div>
             <Image
               src={greenStorm}
