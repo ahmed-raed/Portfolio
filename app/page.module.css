@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap");
+
+.both {
+  display: flex;
+  align-items: center;
+  margin: auto 2%;
+}
+
+.left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.left .text1 {
+  font-size: 30px;
+  user-select: none;
+}
+
+.left .text2 {
+  font-size: 65px;
+  user-select: none;
+}
+
+.left .text3 {
+  font-size: 40px;
+  user-select: none;
+}
+
+.left .text3 span {
+  color: #4afdfb;
+  user-select: none;
+}
+
+.left .linkedinBtn {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 19px;
+  margin: 17px 0px;
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(41px);
+  backdrop-filter: blur(41px);
+  box-shadow: inset 0 98px 100px -48px rgba(255, 255, 255, 0.1);
+}
+
+.left .linkedinBtn span {
+  font-size: 25px;
+  color: #fff;
+}
+
+.right {
+  float: right;
+  width: 50%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.imgAndBlurAndIcons {
+  position: relative;
+}
+
+.imgAndBlurAndIcons .img {
+  width: 346px;
+  height: 432px;
+  object-fit: cover;
+  border-radius: 70px;
+  user-select: none;
+}
+
+.imgAndBlurAndIcons .blur {
+  width: 346px;
+  height: 432px;
+  border-radius: 70px;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  box-shadow: inset 0 1px 40px 0 rgba(227, 222, 255, 0.2),
+    inset 0 4px 18px 0 rgba(0, 0, 0, 0.3),
+    inset 0 98px 100px -48px rgba(126, 126, 126, 0.3),
+    inset 0 -82px 68px -64px rgba(140, 140, 140, 0.3);
+  right: 230px;
+  top: 50px;
+  position: absolute;
+}
+
+.blurText {
+  color: #fff;
+  font-family: "Text Me One", sans-serif;
+  font-size: 24px;
+  margin: 41px;
+  display: inline-block;
+  user-select: none;
+}
+
+.blueStorm {
+  position: relative;
+  top: 60px;
+  left: 200px;
+}
+
+.greenStorm {
+  position: relative;
+  bottom: 34px;
+  right: 265px;
+}
+
+.allThings {
+  height: 50%;
+}
