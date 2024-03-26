@@ -44,7 +44,7 @@ export default function Home() {
                 src={myImage}
                 alt="Picture of the author"
                 className={styles.img}
-                priority={true}
+                priority
               />
               <div className={styles.blur}>
                 <span className={styles.blurText}>Welcome To My Portfolio</span>
