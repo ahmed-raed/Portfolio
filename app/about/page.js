@@ -7,7 +7,7 @@ import blueStorm from "../../public/assets/Ellipse3.png";
 import Link from "next/link";
 import cert1 from "../../public/assets/reactCertificate.png";
 import cert2 from "../../public/assets/frontendCertificate.png";
-import certIcon from "../../public/assets/cert.png"
+import certIcon from "../../public/assets/cert.png";
 
 export default function About() {
   return (
@@ -27,7 +27,19 @@ export default function About() {
               className={styles.personalPhoto}
               priority
             />
-            <Link href="https://drive.google.com/file/d/1IvTIJChimwTwcNXlI2RoKoIiVcaU-nZ1" target="_blank" className={styles.bluring}>My Resume<Image src={certIcon} alt="certificate" priority className={styles.certIco} /></Link>
+            <Link
+              href="https://drive.google.com/file/d/1IvTIJChimwTwcNXlI2RoKoIiVcaU-nZ1"
+              target="_blank"
+              className={styles.bluring}
+            >
+              My Resume
+              <Image
+                src={certIcon}
+                alt="certificate"
+                priority
+                className={styles.certIco}
+              />
+            </Link>
             <Image
               src={blueStorm}
               alt="Blue Storm"
@@ -37,7 +49,7 @@ export default function About() {
           <div className={styles.rightSec}>
             <div className={styles.perParagraph}>
               <p>
-                <span className={styles.paraSpan}>I'm Ahmed Al-Mawla,</span>
+                <span className={styles.paraSpan}>I am Ahmed Al-Mawla,</span>
                 <br />
                 an AI engineer and web developer passionate about blending
                 artificial intelligence with web technologies. Specializing in
@@ -50,34 +62,40 @@ export default function About() {
             </div>
             <div className={styles.certificates}>
               <div className={styles.certOne}>
-                  <Link href="https://drive.google.com/file/d/1FkvPBAbfXT5sW5hUaxU2uJwiCVxN_bRs" target="_blank">
-                      <div className={styles.imageContainer}>
-                          <Image
-                              src={cert1}
-                              alt="cert1"
-                              className={styles.certs}
-                              priority
-                          />
-                          <div className={styles.overlay}></div>
-                      </div>
-                  </Link>
-                  <h4>Front-end Development with React certificate</h4>
+                <Link
+                  href="https://drive.google.com/file/d/1FkvPBAbfXT5sW5hUaxU2uJwiCVxN_bRs"
+                  target="_blank"
+                >
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={cert1}
+                      alt="cert1"
+                      className={styles.certs}
+                      priority
+                    />
+                    <div className={styles.overlay}></div>
+                  </div>
+                </Link>
+                <h4>Front-end Development with React certificate</h4>
               </div>
               <div className={styles.certTwo}>
-                  <Link href="https://drive.google.com/file/d/1Yzh2g-Pips-Zuni1ZeUfXrOtHWAxIvpu" target="_blank">
-                      <div className={styles.imageContainer}>
-                          <Image
-                              src={cert2}
-                              alt="cert2"
-                              className={styles.certs}
-                              priority
-                          />
-                          <div className={styles.overlay}></div>
-                      </div>
-                  </Link>
-                  <h4>Meta Front-End Development certificate</h4>
+                <Link
+                  href="https://drive.google.com/file/d/1Yzh2g-Pips-Zuni1ZeUfXrOtHWAxIvpu"
+                  target="_blank"
+                >
+                  <div className={styles.imageContainer}>
+                    <Image
+                      src={cert2}
+                      alt="cert2"
+                      className={styles.certs}
+                      priority
+                    />
+                    <div className={styles.overlay}></div>
+                  </div>
+                </Link>
+                <h4>Meta Front-End Development certificate</h4>
               </div>
-          </div>
+            </div>
           </div>
         </div>
       </div>
