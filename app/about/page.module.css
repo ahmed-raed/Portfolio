@@ -61,6 +61,25 @@
   position: relative;
   top: 110px;
   user-select: none;
+  animation: move2Storm 15s linear infinite;
+}
+
+@keyframes move2Storm {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(35px, 0);
+  }
+  50% {
+    transform: translate(35px, 35px);
+  }
+  75% {
+    transform: translate(0, 35px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .purpleStorm {
@@ -68,6 +87,16 @@
   bottom: 73px;
   right: 135px;
   user-select: none;
+  animation: moveStorm 15s linear infinite;
+}
+
+@keyframes moveStorm {
+  0% {
+    transform: rotate(0deg) translateX(35px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(35px) rotate(-360deg);
+  }
 }
 
 .rightSec {

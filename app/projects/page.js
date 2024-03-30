@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./page.module.css";
 import RoboChat from "../../public/assets/RoboChat.png";
-import StartupsBus from "../../public/assets/StartupsBus.png";
-import Travelo from "../../public/assets/Travelo.png";
+import StartupsBus from "../../public/assets/StartupsBus.jpg";
+import Travelo from "../../public/assets/Travelo.jpg";
 import linkIcon from "../../public/assets/link.png";
 import blueStorm from "../../public/assets/Ellipse3.png";
 import greenStorm from "../../public/assets/Ellipse1.png";
@@ -16,7 +16,7 @@ export default function Projects() {
         <h1 className={styles.headline}>Projects</h1>
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <Link href="/jump" target="_blank" className={styles.imgLink}>
+            <Link href="https://www.robochat.live/" target="_blank" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={RoboChat}
@@ -30,15 +30,12 @@ export default function Projects() {
           </div>
           <div className={styles.projectInfo}>
             <h2 className={styles.title}>RoboChat</h2>
-            <p className={styles.projectPara}>
-              A chatbot that helps users find the best chatbot platform for
-              their business.
-            </p>
+            <p className={styles.projectPara}>An AI-powered chatbot and assistant developed using NLP. You can use it to help you with your tasks.</p>
             <span className={styles.storm}>
               <Image src={blueStorm} alt="storm Icon" priority />
             </span>
             <div className={styles.rightLink}>
-              <Link href="/jump" target="_blank" className={styles.projectLink}>
+              <Link href="https://www.robochat.live/" target="_blank" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
@@ -54,13 +51,13 @@ export default function Projects() {
             <h2 className={styles.title}>Startups Bus</h2>
             <p className={styles.projectPara}>
               The first digital platform for the entrepreneurial ecosystem in
-              Iraq.
+              Iraq. I have had the honor to be one of its founding developers.
             </p>
-            <span className={`${styles.storm} ${styles.leftStorm}`}>
+            <span className={styles.storm2}>
               <Image src={greenStorm} alt="storm Icon" priority />
             </span>
             <div className={`${styles.rightLink} ${styles.secondProjectLink}`}>
-              <Link href="/jump" target="_blank" className={styles.projectLink}>
+              <Link href="https://startupsbus.com/" target="_blank" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
@@ -71,11 +68,11 @@ export default function Projects() {
             </div>
           </div>
           <div className={`${styles.projectImg} ${styles.projectTwoImg}`}>
-            <Link href="/jump" target="_blank" className={styles.imgLink}>
+            <Link href="https://startupsbus.com/" target="_blank" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={StartupsBus}
-                  alt="RoboChat"
+                  alt="Startups Bus"
                   className={styles.pImg}
                   priority
                 />
@@ -86,11 +83,11 @@ export default function Projects() {
         </div>
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <Link href="/jump" target="_blank" className={styles.imgLink}>
+            <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={Travelo}
-                  alt="RoboChat"
+                  alt="Travelo"
                   className={styles.pImg}
                   priority
                 />
@@ -102,13 +99,13 @@ export default function Projects() {
             <h2 className={styles.title}>Travelo</h2>
             <p className={styles.projectPara}>
               A travel platform that helps users find the best travel packages
-              for their next trip.
+              for their next trip!
             </p>
-            <span className={`${styles.storm} ${styles.storming}`}>
+            <span className={styles.storm3}>
               <Image src={blueStorm} alt="storm Icon" priority />
             </span>
             <div className={styles.rightLink}>
-              <Link href="/jump" target="_blank" className={styles.projectLink}>
+              <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
