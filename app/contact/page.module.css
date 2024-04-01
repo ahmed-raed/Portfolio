@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap");
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  font-size: 40px;
+  color: #fff;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contactBtns {
+  margin-top: 135px;
+}
+
+.infoLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 80.6px;
+  border-radius: 15px;
+  backdrop-filter: blur(19.5px);
+  box-shadow: inset 0 -1px 75px -30px rgba(255, 255, 255, 0.21);
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.infoLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.infoLink .naming {
+  font-family: "ABeeZee", sans-serif;
+  font-size: 26px;
+  color: #fff;
+  margin-right: 132px;
+}
+
+.appIcon {
+  margin-left: 20px;
+}
+
+.two {
+  margin-right: 115px !important;
+}
+
+.three {
+  margin-right: 97px !important;
+}
+
+.four {
+  margin-right: 120px !important;
+}

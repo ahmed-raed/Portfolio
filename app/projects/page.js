@@ -16,7 +16,7 @@ export default function Projects() {
         <h1 className={styles.headline}>Projects</h1>
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <Link href="https://www.robochat.live/" target="_blank" className={styles.imgLink}>
+            <Link href="https://www.robochat.live/" target="_blank" title="Click to open" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={RoboChat}
@@ -35,7 +35,7 @@ export default function Projects() {
               <Image src={blueStorm} alt="storm Icon" priority />
             </span>
             <div className={styles.rightLink}>
-              <Link href="https://www.robochat.live/" target="_blank" className={styles.projectLink}>
+              <Link href="https://www.robochat.live/" target="_blank" title="Click to open" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
@@ -51,13 +51,13 @@ export default function Projects() {
             <h2 className={styles.title}>Startups Bus</h2>
             <p className={styles.projectPara}>
               The first digital platform for the entrepreneurial ecosystem in
-              Iraq. I have had the honor to be one of its founding developers.
+              Iraq! I have had the honor to be one of its founding developers.
             </p>
             <span className={styles.storm2}>
               <Image src={greenStorm} alt="storm Icon" priority />
             </span>
             <div className={`${styles.rightLink} ${styles.secondProjectLink}`}>
-              <Link href="https://startupsbus.com/" target="_blank" className={styles.projectLink}>
+              <Link href="https://startupsbus.com/" target="_blank" title="Click to open" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
@@ -68,7 +68,7 @@ export default function Projects() {
             </div>
           </div>
           <div className={`${styles.projectImg} ${styles.projectTwoImg}`}>
-            <Link href="https://startupsbus.com/" target="_blank" className={styles.imgLink}>
+            <Link href="https://startupsbus.com/" target="_blank" title="Click to open" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={StartupsBus}
@@ -83,7 +83,7 @@ export default function Projects() {
         </div>
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" className={styles.imgLink}>
+            <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" title="Click to open" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={Travelo}
@@ -105,7 +105,7 @@ export default function Projects() {
               <Image src={blueStorm} alt="storm Icon" priority />
             </span>
             <div className={styles.rightLink}>
-              <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" className={styles.projectLink}>
+              <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" title="Click to open" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
