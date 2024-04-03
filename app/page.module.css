@@ -64,6 +64,7 @@
 
 .imgAndBlurAndIcons {
   position: relative;
+  pointer-events: none;
 }
 
 .imgAndBlurAndIcons .img {
@@ -72,6 +73,7 @@
   object-fit: cover;
   border-radius: 70px;
   user-select: none;
+  pointer-events: none;
 }
 
 .imgAndBlurAndIcons .blur {
@@ -87,6 +89,7 @@
   right: 230px;
   top: 50px;
   position: absolute;
+  pointer-events: none;
 }
 
 .blurText {
@@ -96,6 +99,7 @@
   margin: 41px;
   display: inline-block;
   user-select: none;
+  pointer-events: none;
 }
 
 .blueStorm {
@@ -104,6 +108,7 @@
   left: 200px;
   user-select: none;
   animation: move3Storm 15s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes move3Storm {
@@ -143,10 +148,12 @@
 
 .allThings {
   height: 50%;
+  pointer-events: none;
 }
 
 .iconsDiv {
   display: flex;
+  pointer-events: none;
 }
 
 .iconsDiv .iconsAi {
@@ -163,6 +170,7 @@
   backdrop-filter: blur(41px);
   box-shadow: inset 0 98px 100px -48px rgba(255, 255, 255, 0.1);
   user-select: none;
+  pointer-events: none;
 }
 
 .iconsDiv .iconsCoding {
@@ -179,6 +187,7 @@
   backdrop-filter: blur(41px);
   box-shadow: inset 0 98px 100px -48px rgba(255, 255, 255, 0.1);
   user-select: none;
+  pointer-events: none;
 }
 
 @media (min-width: 1490px) {
@@ -190,5 +199,115 @@
   }
   .iconsDiv .iconsCoding {
     right: 225px;
+  }
+}
+
+@media (max-width: 947px) {
+  .both {
+    flex-direction: column-reverse !important;
+  }
+  .right,
+  .left {
+    width: 100% !important;
+  }
+  .imgAndBlurAndIcons {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-content: flex-end !important;
+  }
+  .right,
+  .left {
+    padding: 0 13px !important;
+  }
+  .img {
+    width: 233px !important;
+    height: 292px !important;
+  }
+  .blur {
+    width: 233px !important;
+    height: 292px !important;
+    right: initial !important;
+    top: 126px !important;
+    z-index: 22 !important;
+  }
+  .blurText {
+    font-size: 28px !important;
+  }
+  .greenStorm,
+  .blueStorm {
+    width: 105px !important;
+    height: 81px !important;
+  }
+  .blueStorm {
+    top: 42px !important;
+    left: 78px !important;
+    animation: moveResStorm 15s linear infinite !important;
+  }
+  @keyframes moveResStorm {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(15px, 0);
+    }
+    50% {
+      transform: translate(15px, 15px);
+    }
+    75% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  .greenStorm {
+    left: 135px !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    animation: moveRes4Storm 15s linear infinite !important;
+  }
+  @keyframes moveRes4Storm {
+    0% {
+      transform: rotate(0deg) translateX(15px) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(15px) rotate(-360deg);
+    }
+  }
+  .allThings {
+    width: 100% !important;
+  }
+  .text1 {
+    font-size: 22px !important;
+  }
+  .text2 {
+    font-size: 38px !important;
+  }
+  .text3 {
+    font-size: 24px !important;
+  }
+  .iconsCoding,
+  .iconsAi {
+    width: 60px !important;
+    height: 60px !important;
+    z-index: 32;
+  }
+  .iconsAi {
+    top: 410px !important;
+    right: 46px !important;
+  }
+  .iconsCoding {
+    top: 480px !important;
+    right: 46px !important;
+  }
+  .linkedinBtn {
+    padding: 14px !important;
+  }
+  .linkedinBtn span {
+    font-size: 18px !important;
+  }
+  .left {
+    margin-top: 110px !important;
   }
 }
