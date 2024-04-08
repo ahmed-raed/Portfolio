@@ -32,7 +32,7 @@ export default function Projects() {
             <h2 className={styles.title}>RoboChat</h2>
             <p className={styles.projectPara}>An AI-powered chatbot and assistant developed using NLP. You can use it to help you with your tasks.</p>
             <span className={styles.storm}>
-              <Image src={blueStorm} alt="storm Icon" priority />
+              <Image src={blueStorm} alt="storm Icon" className={styles.smallClouds} priority />
             </span>
             <div className={styles.rightLink}>
               <Link href="https://www.robochat.live/" target="_blank" title="Click to open" className={styles.projectLink}>
@@ -46,7 +46,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className={styles.project}>
+        <div className={`${styles.project} ${styles.column}`}>
           <div className={styles.projectInfo}>
             <h2 className={styles.title}>Startups Bus</h2>
             <p className={styles.projectPara}>
@@ -54,7 +54,7 @@ export default function Projects() {
               Iraq! I have had the honor to be one of its founding developers.
             </p>
             <span className={styles.storm2}>
-              <Image src={greenStorm} alt="storm Icon" priority />
+              <Image src={greenStorm} alt="storm Icon" className={styles.smallClouds} priority />
             </span>
             <div className={`${styles.rightLink} ${styles.secondProjectLink}`}>
               <Link href="https://startupsbus.com/" target="_blank" title="Click to open" className={styles.projectLink}>
@@ -95,14 +95,14 @@ export default function Projects() {
               </div>
             </Link>
           </div>
-          <div className={styles.projectInfo}>
+          <div className={`${styles.projectInfo} ${styles.magnBtm}`}>
             <h2 className={styles.title}>Travelo</h2>
             <p className={styles.projectPara}>
               A travel platform that helps users find the best travel packages
               for their next trip!
             </p>
             <span className={styles.storm3}>
-              <Image src={blueStorm} alt="storm Icon" priority />
+              <Image src={blueStorm} alt="storm Icon" className={styles.smallClouds} priority />
             </span>
             <div className={styles.rightLink}>
               <Link href="https://ahmed-raed.github.io/Travelo/" target="_blank" title="Click to open" className={styles.projectLink}>

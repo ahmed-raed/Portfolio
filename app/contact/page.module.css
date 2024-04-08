@@ -32,9 +32,11 @@
   margin: 10px;
 }
 
-.infoLink:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+@media (min-width: 950px) {
+  .infoLink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
 }
 
 .infoLink .naming {

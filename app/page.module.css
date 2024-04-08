@@ -105,7 +105,7 @@
 .blueStorm {
   position: relative;
   top: 60px;
-  left: 200px;
+  left: 170px;
   user-select: none;
   animation: move3Storm 15s linear infinite;
   pointer-events: none;
@@ -132,7 +132,7 @@
 .greenStorm {
   position: relative;
   bottom: 34px;
-  right: 265px;
+  right: 212px;
   user-select: none;
   animation: moveStorm 15s linear infinite;
 }
@@ -209,6 +209,7 @@
   .right,
   .left {
     width: 100% !important;
+    padding: 0 13px !important;
   }
   .imgAndBlurAndIcons {
     display: flex !important;
@@ -216,9 +217,12 @@
     flex-wrap: wrap !important;
     align-content: flex-end !important;
   }
-  .right,
   .left {
-    padding: 0 13px !important;
+    margin-bottom: 80px!important;
+    margin-top: 110px !important;
+  }
+  .right {
+    justify-content: center!important;
   }
   .img {
     width: 233px !important;
@@ -276,7 +280,7 @@
     }
   }
   .allThings {
-    width: 100% !important;
+    width: 365px!important;
   }
   .text1 {
     font-size: 22px !important;
@@ -306,8 +310,5 @@
   }
   .linkedinBtn span {
     font-size: 18px !important;
-  }
-  .left {
-    margin-top: 110px !important;
   }
 }
