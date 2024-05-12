@@ -10,7 +10,7 @@ import ai from "../public/assets/ai.png";
 import coding from "../public/assets/coding.png";
 
 export default function Home() {
-  const strings = ["Web Developer", "AI Enginner", "Tech Geek"];
+  const strings = ["Web Developer", "AI Enginner", "Technical Consultant"];
 
   return (
     <>
