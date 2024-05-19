@@ -6,12 +6,21 @@ import email from "../../public/assets/Email.png";
 import linkedin from "../../public/assets/linkedin.png";
 import insta from "../../public/assets/insta.png";
 import github from "../../public/assets/github.png";
+import geenCloud from "../../public/assets/Ellipse1.png";
+import blueCloud from "../../public/assets/Ellipse3.png";
+
 
 export default function Contact() {
   return (
     <>
       <div className={styles.main}>
         <h1 className={styles.headline}>Get In Touch</h1>
+        <Image
+          src={geenCloud}
+          alt="Green Cloud"
+          priority
+          className={styles.greenCloud}
+        />
         <div className={styles.contactBtns}>
           <Link
             target="_blank"
@@ -56,6 +65,12 @@ export default function Contact() {
             <span className={`${styles.naming} ${styles.four}`}>GitHub</span>
           </Link>
         </div>
+        <Image
+          src={blueCloud}
+          alt="Blue Cloud"
+          priority
+          className={styles.blueCloud}
+        />
       </div>
     </>
   );

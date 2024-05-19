@@ -30,6 +30,8 @@
   box-shadow: inset 0 -1px 75px -30px rgba(255, 255, 255, 0.21);
   transition: all 0.3s ease;
   margin: 10px;
+  position: relative;
+  z-index: 22;
 }
 
 @media (min-width: 950px) {
@@ -65,5 +67,78 @@
 @media (max-width: 947px) {
   .contactBtns {
     margin-bottom: 60px!important;
+  }
+  .greenCloud {
+    width: 100px!important;
+    height: 100px!important;
+    animation: greenStorm 34s infinite linear!important;
+  }
+  .blueCloud {
+    width: 100px!important;
+    height: 80px!important;
+    animation: greenStorm 34s infinite linear!important;
+  }
+  @keyframes greenStorm {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(0, -80px);
+    }
+    50% {
+      transform: translate(0, 0);
+    }
+    75% {
+      transform: translate(0, 50px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.greenCloud {
+  position: absolute;
+  top: 212px;
+  width: 150px;
+  height: 150px;
+  animation: move33Storm 34s infinite linear;
+}
+
+@keyframes move33Storm {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(235px, 0);
+  }
+  50% {
+    transform: translate(235px, 235px);
+  }
+  75% {
+    transform: translate(0, 235px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.blueCloud {
+  position: absolute;
+  width: calc(188px / 1.2);
+  height: calc(150px / 1.2);
+  top: 580px;
+  animation: moveRightLeft 27s infinite;
+}
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-235px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

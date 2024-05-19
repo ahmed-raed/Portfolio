@@ -5,7 +5,7 @@ import purpleStorm from "../../public/assets/purpleStorm.png";
 import personalPhoto from "../../public/assets/personal.png";
 import blueStorm from "../../public/assets/Ellipse3.png";
 import Link from "next/link";
-import cert1 from "../../public/assets/reactCertificate.png";
+import cert1 from "../../public/assets/AICertificate.png";
 import cert2 from "../../public/assets/frontendCertificate.png";
 import certIcon from "../../public/assets/cert.png";
 
@@ -63,7 +63,7 @@ export default function About() {
             <div className={styles.certificates}>
               <div className={styles.certOne}>
                 <Link
-                  href="https://drive.google.com/file/d/1FkvPBAbfXT5sW5hUaxU2uJwiCVxN_bRs"
+                  href="https://scrimba.com/certificate/uRnqm9AV/gaiengineer"
                   target="_blank"
                 >
                   <div className={styles.imageContainer}>
@@ -76,7 +76,7 @@ export default function About() {
                     <div className={styles.overlay}></div>
                   </div>
                 </Link>
-                <h4>Front-end Development with React certificate</h4>
+                <h4>AI Engineer Certificate</h4>
               </div>
               <div className={styles.certTwo}>
                 <Link
@@ -93,7 +93,7 @@ export default function About() {
                     <div className={styles.overlay}></div>
                   </div>
                 </Link>
-                <h4>Meta Front-End Development certificate</h4>
+                <h4>Meta Front-End Developer Certificate</h4>
               </div>
             </div>
           </div>
