@@ -28,7 +28,7 @@ export default function About() {
               priority
             />
             <Link
-              href="https://drive.google.com/file/d/1DpRiyLFSCqY-HNFUZ-rGqAg5YLyUivq6"
+              href="https://drive.google.com/file/d/1jFVSbepp8IseYfHff7_gwMrm5ffIb-MR/view?usp=sharing"
               target="_blank"
               className={styles.bluring}
             >
