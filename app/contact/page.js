@@ -35,7 +35,7 @@ export default function Contact() {
             />
             <span className={`${styles.naming} ${styles.one}`}>Email</span>
           </Link>
-          <Link target="_blank" href="https://www.linkedin.com/in/ahmedraed202/" className={styles.infoLink}>
+          <Link target="_blank" href="https://www.linkedin.com/in/ahmedalmawla/" className={styles.infoLink}>
             <Image
               src={linkedin}
               alt="LinkedIn"
