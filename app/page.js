@@ -25,7 +25,7 @@ export default function Home() {
             </span>
           </div>
           <Link
-            href="https://www.linkedin.com/in/ahmedraed202/"
+            href="https://www.linkedin.com/in/ahmedalmawla/"
             className={styles.linkedinBtn}
             target="_blank"
           >
