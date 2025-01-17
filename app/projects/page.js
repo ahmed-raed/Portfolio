@@ -16,7 +16,7 @@ export default function Projects() {
         <h1 className={styles.headline}>Projects</h1>
         <div className={styles.project}>
           <div className={styles.projectImg}>
-            <Link href="https://www.robochat.live/" target="_blank" title="Click to open" className={styles.imgLink}>
+            <Link href="https://robochat.ahmedalmawla.tech/" target="_blank" title="Click to open" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={RoboChat}
