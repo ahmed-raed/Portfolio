@@ -35,7 +35,7 @@ export default function Projects() {
               <Image src={blueStorm} alt="storm Icon" className={styles.smallClouds} priority />
             </span>
             <div className={styles.rightLink}>
-              <Link href="https://www.robochat.live/" target="_blank" title="Click to open" className={styles.projectLink}>
+              <Link href="https://robochat.ahmedalmawla.tech/" target="_blank" title="Click to open" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
