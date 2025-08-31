@@ -47,7 +47,7 @@ export default function Home() {
                 priority
               />
               <div className={styles.blur}>
-                <span className={styles.blurText}>Welcome To My Portfolio</span>
+                <span className={styles.blurText}>Welcome to my portfolio!</span>
               </div>
             </div>
             <div className={styles.iconsDiv}>

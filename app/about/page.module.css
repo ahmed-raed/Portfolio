@@ -186,29 +186,34 @@
 
 @media (max-width: 947px) {
   .main {
-    background-image: linear-gradient(to bottom, #000, #242424, #000)!important;
-    height: max-content!important;
+    background-image: linear-gradient(
+      to bottom,
+      #000,
+      #242424,
+      #000
+    ) !important;
+    height: max-content !important;
   }
   .headline {
     font-size: 30px !important;
   }
   .bothSections {
     flex-direction: column !important;
-    margin-top: 40px!important;
+    margin-top: 40px !important;
   }
   .rightSec {
-    margin-top: 106px!important;
-    width: 100%!important;
+    margin-top: 106px !important;
+    width: 100% !important;
   }
   .personalPhoto {
     width: 249px !important;
     height: 313px !important;
   }
   .purpleStorm {
-    width: 96px!important;
-    height: 96px!important;
-    bottom: 20px!important;
-    right: 105px!important;
+    width: 96px !important;
+    height: 96px !important;
+    bottom: 20px !important;
+    right: 105px !important;
     animation: moveTwoStorm 15s linear infinite;
   }
   @keyframes moveTwoStorm {
@@ -220,15 +225,15 @@
     }
   }
   .certIco {
-    top: 32px!important;
-    left: 162px!important;
+    top: 32px !important;
+    left: 162px !important;
   }
   .blueStorm {
-    width: 116px!important;
-    height: 89px!important;
-    left: 110px!important;
-    top: 84px!important;
-    animation: moveOneStorm 15s linear infinite!important;
+    width: 116px !important;
+    height: 89px !important;
+    left: 110px !important;
+    top: 84px !important;
+    animation: moveOneStorm 15s linear infinite !important;
   }
   @keyframes moveOneStorm {
     0% {
@@ -248,22 +253,22 @@
     }
   }
   .bluring {
-    top: 180px!important;
-    left: 62px!important;
-    font-size: 22px!important;
-    width: 187px!important;
-    height: 61px!important;
+    top: 180px !important;
+    left: 62px !important;
+    font-size: 22px !important;
+    width: 187px !important;
+    height: 61px !important;
   }
   .perParagraph {
-    font-size: 16px!important;
-    width: 100%!important;
+    font-size: 16px !important;
+    width: 100% !important;
   }
   .paraSpan {
-    font-size: 25px!important;
+    font-size: 25px !important;
   }
   .certificates {
-    flex-direction: column!important;
-    margin-top: 15px!important;
+    flex-direction: column !important;
+    margin-top: 15px !important;
   }
 }
 
@@ -356,6 +361,11 @@
 
 .errorMessage {
   color: #f44336;
+  margin-top: 15px;
+}
+
+.infoMessage {
+  color: #2196f3;
   margin-top: 15px;
 }
 

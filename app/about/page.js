@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import styles from "./page.module.css";
@@ -15,7 +15,7 @@ export default function About() {
   const [showPopup, setShowPopup] = useState(false);
   const [formStatus, setFormStatus] = useState({
     message: "",
-    type: ""
+    type: "",
   });
 
   const openPopup = () => {
@@ -27,27 +27,97 @@ export default function About() {
     setFormStatus({ message: "", type: "" });
   };
 
-  const requestResume = (e) => {
+  const requestResume = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
 
-    if (email) {
-      const mailtoLink = `mailto:ahmedraed.dev@gmail.com?subject=Resume%20Request&body=Hello%20Ahmed,%0A%0AI%20would%20like%20to%20request%20your%20resume.%0A%0AMy%20email%20is:%20${encodeURIComponent(email)}%0A%0AThank%20you!`;
-      window.open(mailtoLink);
+    if (!email) {
+      setFormStatus({
+        message: "Please enter your email address.",
+        type: "error",
+      });
+      return;
+    }
+
+    setFormStatus({
+      message: "Sending resume request...",
+      type: "info",
+    });
+
+    try {
+      const formspreeUrl = "https://formspree.io/f/xeolgdol";
+
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("subject", "New Resume Request from Portfolio");
+      formData.append(
+        "message",
+        `Hello Ahmed,
+
+Someone has requested your resume through your portfolio website.
+
+Request Details:
+- User Email: ${email}
+- Date: ${new Date().toLocaleString()}
+
+Please send your resume to the provided email address.
+
+Best regards,
+Portfolio Website`
+      );
+
+      const response = await fetch(formspreeUrl, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setFormStatus({
+          message:
+            "Resume request sent successfully! I'll send you my resume shortly.",
+          type: "success",
+        });
+
+        setTimeout(() => {
+          closePopup();
+        }, 3000);
+      } else {
+        throw new Error("Formspree request failed");
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+
+      const subject = "New Resume Request from Portfolio";
+      const body = `Hello Ahmed,
+
+Someone has requested your resume through your portfolio website.
+
+Request Details:
+- Email: ${email}
+- Date: ${new Date().toLocaleString()}
+
+Please send your resume to the provided email address.
+
+Best regards,
+Portfolio Website`;
+
+      const mailtoUrl = `mailto:ahmedraed.dev@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.open(mailtoUrl);
 
       setFormStatus({
-        message: "Email client opened! If nothing happened, please email ahmedraed.dev@gmail.com directly.",
-        type: "success"
+        message:
+          "Email client opened with your request. If nothing happened, please email ahmedraed.dev@gmail.com directly.",
+        type: "success",
       });
 
       setTimeout(() => {
         closePopup();
-      }, 3000);
-    } else {
-      setFormStatus({
-        message: "Please enter your email address.",
-        type: "error"
-      });
+      }, 4000);
     }
   };
 
@@ -68,7 +138,7 @@ export default function About() {
               className={styles.personalPhoto}
               priority
             />
-            <div 
+            <div
               className={styles.bluring}
               onClick={openPopup}
               style={{ cursor: "pointer" }}
@@ -142,37 +212,35 @@ export default function About() {
         {showPopup && (
           <div className={styles.popupOverlay}>
             <div className={styles.popupContent}>
-              <button 
-                className={styles.closeButton}
-                onClick={closePopup}
-              >
+              <button className={styles.closeButton} onClick={closePopup}>
                 ×
               </button>
               <h2>Resume Request</h2>
               <p>Please enter your email to request my resume:</p>
-              
+
               <form onSubmit={requestResume}>
-                <input 
-                  type="email" 
-                  name="email" 
+                <input
+                  type="email"
+                  name="email"
                   placeholder="Your email address"
                   className={styles.emailInput}
                   required
                 />
-                <button 
-                  type="submit"
-                  className={styles.submitButton}
-                >
+                <button type="submit" className={styles.submitButton}>
                   Request Resume
                 </button>
               </form>
-              
+
               {formStatus.message && (
-                <p className={
-                  formStatus.type === "success" 
-                    ? styles.successMessage 
-                    : styles.errorMessage
-                }>
+                <p
+                  className={
+                    formStatus.type === "success"
+                      ? styles.successMessage
+                      : formStatus.type === "error"
+                      ? styles.errorMessage
+                      : styles.infoMessage
+                  }
+                >
                   {formStatus.message}
                 </p>
               )}
