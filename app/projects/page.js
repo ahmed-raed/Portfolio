@@ -57,7 +57,7 @@ export default function Projects() {
               <Image src={greenStorm} alt="storm Icon" className={styles.smallClouds} priority />
             </span>
             <div className={`${styles.rightLink} ${styles.secondProjectLink}`}>
-              <Link href="https://startupsbus.com/" target="_blank" title="Click to open" className={styles.projectLink}>
+              <Link href="https://startupsbus.ahmedalmawla.tech/" target="_blank" title="Click to open" className={styles.projectLink}>
                 <Image
                   src={linkIcon}
                   alt="link Icon"
@@ -68,7 +68,7 @@ export default function Projects() {
             </div>
           </div>
           <div className={`${styles.projectImg} ${styles.projectTwoImg}`}>
-            <Link href="https://startupsbus.com/" target="_blank" title="Click to open" className={styles.imgLink}>
+            <Link href="https://startupsbus.ahmedalmawla.tech/" target="_blank" title="Click to open" className={styles.imgLink}>
               <div className={styles.imageContainer}>
                 <Image
                   src={StartupsBus}
