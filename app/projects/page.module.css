@@ -123,6 +123,13 @@
   animation: moveStorm 15s linear infinite;
 }
 
+.storm1 {
+  position: absolute;
+  margin-left: -56px;
+  bottom: -280px;
+  animation: moveStorm 15s linear infinite;
+}
+
 @keyframes moveStorm {
   0% {
     transform: rotate(0deg) translateX(50px) rotate(0deg);
@@ -178,39 +185,39 @@
 
 @media (max-width: 947px) {
   .project {
-    flex-direction: column!important;
-    height: 100%!important;
-    margin: 85px 0px!important;
+    flex-direction: column !important;
+    height: 100% !important;
+    margin: 85px 0px !important;
   }
   .projectImg {
-    width: fit-content!important;
+    width: fit-content !important;
   }
   .pImg,
   .overlay {
-    width: 268px!important;
-    height: 196px!important;
-    z-index: 33!important;
+    width: 268px !important;
+    height: 196px !important;
+    z-index: 33 !important;
   }
   .column {
-    flex-direction: column-reverse!important;
+    flex-direction: column-reverse !important;
   }
   .rightLink,
   .secondProjectLink {
-    display: flex!important;
-    align-items: center!important;
+    display: flex !important;
+    align-items: center !important;
   }
   .storm {
     margin-left: 140px !important;
     top: 593px !important;
-    animation: moveJurStorm 15s linear infinite!important;
+    animation: moveJurStorm 15s linear infinite !important;
   }
   .storm2 {
-    left: 103px!important;
-    animation: moveJurStorm 15s linear infinite!important;
+    left: 103px !important;
+    animation: moveJurStorm 15s linear infinite !important;
   }
   .storm3 {
-    right: 124px!important;
-    animation: move3urStorm 15s linear infinite!important;
+    right: 124px !important;
+    animation: move3urStorm 15s linear infinite !important;
     top: 1685px !important;
   }
   @keyframes moveJurStorm {
@@ -239,27 +246,122 @@
     }
   }
   .smallClouds {
-    width: 121px!important;
-    height: 79px!important;
+    width: 121px !important;
+    height: 79px !important;
   }
   .projectPara {
-    font-size: 16px!important;
-    width: 302px!important;
-    height: 130px!important;
+    font-size: 16px !important;
+    width: 302px !important;
+    height: 130px !important;
   }
   .title {
-    margin: 15px 0px!important;
-    font-size: 30px!important;
+    margin: 15px 0px !important;
+    font-size: 30px !important;
   }
   .projectLink {
-    width: 60px!important;
-    height: 60px!important;
+    width: 60px !important;
+    height: 60px !important;
   }
   .linkIcon {
-    width: 25px!important;
-    height: 25px!important;
+    width: 25px !important;
+    height: 25px !important;
   }
   .magnBtm {
-    margin-bottom: 50px!important;
+    margin-bottom: 50px !important;
+  }
+}
+
+/* Popup styles - matching the requestResume popup from about page */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popupContent {
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.closeButton:hover {
+  color: #aaa;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.closeBtn,
+.contactButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-family: "ABeeZee", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.closeBtn {
+  background: linear-gradient(90deg, #4a4a4a, #333);
+  color: #fff;
+  border: none;
+}
+
+.closeBtn:hover {
+  background: linear-gradient(90deg, #555, #444);
+  transform: translateY(-2px);
+}
+
+.contactButton {
+  background: linear-gradient(90deg, #4a4a4a, #333);
+  color: #fff;
+  border: none;
+}
+
+.contactButton:hover {
+  background: linear-gradient(90deg, #555, #444);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 947px) {
+  .popupContent {
+    width: 85%;
+    padding: 25px;
   }
 }
