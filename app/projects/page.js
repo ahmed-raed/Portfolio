@@ -81,7 +81,7 @@ export default function Projects() {
         <div className={styles.project}>
           <div className={styles.projectImg}>
             <Link
-              href="https://robochat.ahmedalmawla.tech/"
+              href="https://robochat.ahmedalmawla.com/"
               target="_blank"
               title="Click to open"
               className={styles.imgLink}
@@ -113,7 +113,7 @@ export default function Projects() {
             </span>
             <div className={styles.rightLink}>
               <Link
-                href="https://robochat.ahmedalmawla.tech/"
+                href="https://robochat.ahmedalmawla.com/"
                 target="_blank"
                 title="Click to open"
                 className={styles.projectLink}
@@ -145,7 +145,7 @@ export default function Projects() {
             </span>
             <div className={`${styles.rightLink} ${styles.secondProjectLink}`}>
               <Link
-                href="https://startupsbus.ahmedalmawla.tech/"
+                href="https://startupsbus.ahmedalmawla.com/"
                 target="_blank"
                 title="Click to open"
                 className={styles.projectLink}
@@ -161,7 +161,7 @@ export default function Projects() {
           </div>
           <div className={`${styles.projectImg} ${styles.projectTwoImg}`}>
             <Link
-              href="https://startupsbus.ahmedalmawla.tech/"
+              href="https://startupsbus.ahmedalmawla.com/"
               target="_blank"
               title="Click to open"
               className={styles.imgLink}
