@@ -47,6 +47,10 @@
   transform: translateY(-2px);
 }
 
+.copyBtn:active {
+  transform: scale(0.95);
+}
+
 .copyIcon {
   color: #4afdfb;
   transition: color 0.3s ease;
