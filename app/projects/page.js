@@ -238,9 +238,9 @@ export default function Projects() {
               </button>
               <h2>Private Project</h2>
               <p>
-                This project is private and not publicly available. If you're
+                This project is private and not publicly available. If you&apos;re
                 interested in learning more about Hatra Home, please feel free
-                to contact me and I'll be happy to show you the details.
+                to contact me and I&apos;ll be happy to show you the details.
               </p>
               <div className={styles.modalButtons}>
                 <button onClick={closeModal} className={styles.closeBtn}>

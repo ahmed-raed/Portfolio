@@ -51,8 +51,10 @@ export default function Contact() {
               onClick={copyEmail}
               className={styles.copyBtn}
               title={copied ? "Copied!" : "Copy email address"}
+              aria-label={copied ? "Email address copied" : "Copy email address"}
             >
               <svg
+                aria-hidden="true"
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
