@@ -49,10 +49,11 @@ export default function Projects() {
                 onClick={handleHatraHomeClick}
                 className={styles.projectLink}
                 title="Click to learn more"
+                aria-label="View Hatra Home details"
               >
                 <Image
                   src={linkIcon}
-                  alt="link Icon"
+                  alt=""
                   className={styles.linkIcon}
                   priority
                 />
@@ -117,10 +118,11 @@ export default function Projects() {
                 target="_blank"
                 title="Click to open"
                 className={styles.projectLink}
+                aria-label="Visit RoboChat website"
               >
                 <Image
                   src={linkIcon}
-                  alt="link Icon"
+                  alt=""
                   className={styles.linkIcon}
                   priority
                 />
@@ -149,10 +151,11 @@ export default function Projects() {
                 target="_blank"
                 title="Click to open"
                 className={styles.projectLink}
+                aria-label="Visit Startups Bus website"
               >
                 <Image
                   src={linkIcon}
-                  alt="link Icon"
+                  alt=""
                   className={styles.linkIcon}
                   priority
                 />
@@ -217,10 +220,11 @@ export default function Projects() {
                 target="_blank"
                 title="Click to open"
                 className={styles.projectLink}
+                aria-label="Visit Travelo website"
               >
                 <Image
                   src={linkIcon}
-                  alt="link Icon"
+                  alt=""
                   className={styles.linkIcon}
                   priority
                 />

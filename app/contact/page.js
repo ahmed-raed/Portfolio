@@ -41,7 +41,7 @@ export default function Contact() {
             >
               <Image
                 src={email}
-                alt="Email"
+                alt=""
                 priority
                 className={styles.appIcon}
               />
@@ -101,7 +101,7 @@ export default function Contact() {
           >
             <Image
               src={linkedin}
-              alt="LinkedIn"
+              alt=""
               priority
               className={styles.appIcon}
             />
@@ -114,7 +114,7 @@ export default function Contact() {
           >
             <Image
               src={insta}
-              alt="Instagram"
+              alt=""
               priority
               className={styles.appIcon}
             />
@@ -129,7 +129,7 @@ export default function Contact() {
           >
             <Image
               src={github}
-              alt="GitHub"
+              alt=""
               priority
               className={styles.appIcon}
             />
