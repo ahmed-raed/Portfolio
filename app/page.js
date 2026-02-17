@@ -8,12 +8,14 @@ import blueStorm from "../public/assets/Ellipse3.png";
 import greenStorm from "../public/assets/Ellipse1.png";
 import ai from "../public/assets/ai.png";
 import coding from "../public/assets/coding.png";
+import ThreeScene from "./components/ThreeScene";
 
 export default function Home() {
   const strings = ["Web Developer", "AI Developer", "Technical Consultant"];
 
   return (
     <>
+      <ThreeScene />
       <div className={styles.both}>
         <div className={styles.left}>
           <div className={styles.text1}>Hello, My name is</div>

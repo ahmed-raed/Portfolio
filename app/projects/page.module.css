@@ -3,6 +3,8 @@
 .main {
   background-image: linear-gradient(to bottom, #000, #242424, #000);
   padding-top: 30px;
+  min-height: 100%;
+  flex: 1;
 }
 
 .headline {
@@ -17,7 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 641px;
+  min-height: 500px;
+  padding: 50px 0;
 }
 
 .projectImg {
@@ -186,7 +189,7 @@
 @media (max-width: 947px) {
   .project {
     flex-direction: column !important;
-    height: 100% !important;
+    height: auto !important;
     margin: 85px 0px !important;
   }
   .projectImg {

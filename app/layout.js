@@ -21,7 +21,9 @@ export default function RootLayout({ children }) {
           <div className="contact"><Link href="/contact" className="theLink">Contact</Link></div>
         </div>
       </nav>
-      {children}
+      <main style={{ flex: 1, display: 'flex', flexDirection: 'column', width: '100%' }}>
+        {children}
+      </main>
       </body>
     </html>
   );
