@@ -15,7 +15,7 @@ export default function Contact() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("ahmedraed.dev@gmail.com");
+      await navigator.clipboard.writeText("me@ahmedalmawla.com");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -36,7 +36,7 @@ export default function Contact() {
           <div className={styles.emailContainer}>
             <Link
               target="_blank"
-              href="mailto:ahmedraed.dev@gmail.com"
+              href="mailto:me@ahmedalmawla.com"
               className={styles.infoLink}
             >
               <Image
