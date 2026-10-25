@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./page.module.css";
 import RoboChat from "../../public/assets/RoboChat.png";
 import StartupsBus from "../../public/assets/StartupsBus.jpg";
@@ -11,9 +11,73 @@ import blueStorm from "../../public/assets/Ellipse3.png";
 import greenStorm from "../../public/assets/Ellipse1.png";
 import Link from "next/link";
 import Image from "next/image";
+import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
 
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          isNormalMotion: "(prefers-reduced-motion: no-preference)",
+          isReducedMotion: "(prefers-reduced-motion: reduce)",
+        },
+        (context) => {
+          const { isReducedMotion } = context.conditions;
+
+          if (isReducedMotion) {
+            gsap.set(containerRef.current, { autoAlpha: 1 });
+            return;
+          }
+
+          gsap.set(containerRef.current, { autoAlpha: 1 });
+
+          // Headline entrance
+          gsap.from(`.${styles.headline}`, {
+            y: -30,
+            autoAlpha: 0,
+            duration: 0.7,
+            ease: "power3.out",
+          });
+
+          // ScrollTrigger entrance for each project card
+          const projects = gsap.utils.toArray(`.${styles.project}`);
+          projects.forEach((proj, idx) => {
+            gsap.from(proj, {
+              y: 50,
+              autoAlpha: 0,
+              duration: 0.8,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: proj,
+                start: "top 85%",
+                toggleActions: "play none none reverse",
+              },
+            });
+          });
+
+          // Hover animation on project images (zoom overlay) & card lift
+          projects.forEach((proj) => {
+            const imgContainer = proj.querySelector(`.${styles.imageContainer}`);
+            if (imgContainer) {
+              const img = imgContainer.querySelector("img");
+              imgContainer.addEventListener("mouseenter", () => {
+                gsap.to(img, { scale: 1.05, duration: 0.4, ease: "power2.out" });
+              });
+              imgContainer.addEventListener("mouseleave", () => {
+                gsap.to(img, { scale: 1, duration: 0.4, ease: "power2.out" });
+              });
+            }
+          });
+        }
+      );
+    },
+    { scope: containerRef }
+  );
 
   const handleHatraHomeClick = (e) => {
     e.preventDefault();
@@ -25,7 +89,7 @@ export default function Projects() {
   };
 
   return (
-    <>
+    <div ref={containerRef} style={{ visibility: "hidden" }}>
       <div className={styles.main}>
         <h1 className={styles.headline}>Projects</h1>
         <div className={`${styles.project} ${styles.column}`}>
@@ -254,6 +318,6 @@ export default function Projects() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
