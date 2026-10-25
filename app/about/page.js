@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import purpleStorm from "../../public/assets/purpleStorm.png";
@@ -10,6 +10,7 @@ import Link from "next/link";
 import cert1 from "../../public/assets/AICertificate.png";
 import cert2 from "../../public/assets/frontendCertificate.png";
 import certIcon from "../../public/assets/cert.png";
+import { gsap, useGSAP } from "@/lib/gsap";
 
 export default function About() {
   const [showPopup, setShowPopup] = useState(false);
@@ -17,6 +18,101 @@ export default function About() {
     message: "",
     type: "",
   });
+
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      const mm = gsap.matchMedia();
+
+      mm.add(
+        {
+          isNormalMotion: "(prefers-reduced-motion: no-preference)",
+          isReducedMotion: "(prefers-reduced-motion: reduce)",
+        },
+        (context) => {
+          const { isReducedMotion } = context.conditions;
+
+          if (isReducedMotion) {
+            gsap.set(containerRef.current, { autoAlpha: 1 });
+            return;
+          }
+
+          gsap.set(containerRef.current, { autoAlpha: 1 });
+
+          const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+          });
+
+          // Headline
+          tl.from(`.${styles.headline}`, {
+            y: -30,
+            autoAlpha: 0,
+            duration: 0.7,
+          })
+            // Left image section & badge
+            .from(
+              `.${styles.leftSec}`,
+              {
+                x: -40,
+                autoAlpha: 0,
+                duration: 0.8,
+              },
+              "-=0.4"
+            )
+            .from(
+              `.${styles.bluring}`,
+              {
+                scale: 0.8,
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: "back.out(1.5)",
+              },
+              "-=0.4"
+            )
+            // Bio paragraph
+            .from(
+              `.${styles.perParagraph}`,
+              {
+                x: 40,
+                autoAlpha: 0,
+                duration: 0.8,
+              },
+              "-=0.7"
+            )
+            // Staggered certificates entrance
+            .from(
+              [`.${styles.certOne}`, `.${styles.certTwo}`],
+              {
+                y: 30,
+                autoAlpha: 0,
+                stagger: 0.2,
+                duration: 0.7,
+              },
+              "-=0.4"
+            );
+
+          // Background storm continuous movement
+          gsap.to(`.${styles.purpleStorm}`, {
+            y: "-=10",
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+
+          gsap.to(`.${styles.blueStorm}`, {
+            y: "+=10",
+            duration: 3.5,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+        }
+      );
+    },
+    { scope: containerRef }
+  );
 
   const openPopup = () => {
     setShowPopup(true);
@@ -122,7 +218,7 @@ Portfolio Website`;
   };
 
   return (
-    <>
+    <div ref={containerRef} style={{ visibility: "hidden" }}>
       <div className={styles.main}>
         <h1 className={styles.headline}>Who am I?</h1>
         <div className={styles.bothSections}>
@@ -248,6 +344,6 @@ Portfolio Website`;
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
